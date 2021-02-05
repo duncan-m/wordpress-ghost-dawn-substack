@@ -1,0 +1,178 @@
+/*
+Theme Name: 2021 Child
+Theme URI: https://www.firstsixlastfour.com
+description: >-
+  2021 Child theme
+  Author: Duncan Malcolm
+Author URI: http://www.duncanmalcolm.com
+Template: twentytwentyone
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: 2021child
+*/
+
+
+/* Responsive */
+@media only screen and (min-width: 652px) {
+	:root {
+	--global--font-size-xxl: 5rem;
+	}
+}
+@media all and (max-width: 540px) {
+
+.comments-area.show-avatars .comment-metadata {
+    margin: 0 0 0 5.3rem !important;
+}
+}
+
+:root {
+    --global--font-size-base: 1.25rem;
+    --global--font-size-xs: 0.8rem;
+    --global--font-size-sm: 1.125rem;
+    --global--font-size-md: 1.25rem;
+    --global--font-size-lg: 1.5rem;
+    --global--font-size-xl: 2.25rem;
+    --global--font-size-xxl: 3.5rem;
+    --global--font-size-xxxl: 5rem;
+}    
+
+/* General */
+
+a {
+	text-decoration: none;
+}
+
+a:hover, .primary-navigation a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+	color: #c2c2c2;
+}
+
+/* Posts */
+
+.post h1 {
+	text-align: center;
+    font-weight: 500;
+	margin: 0.3rem 0 0.3rem 0;
+}
+.post-meta {
+	text-align: center;
+	font-size: 1rem;
+}
+
+p.post-meta {
+    margin-bottom: 0;
+    padding: 0;
+    font-variant: all-small-caps;
+    font-weight: 500;
+}
+
+.post .cat a {
+	color: #f2522c;
+}
+.post .date, .post .readingt {
+	color: #c2c2c2; 
+}
+
+.texcerpt {
+	text-align: center;
+	font-style: italic;
+    color: #cecece;
+}
+
+.single .site-main > article > .entry-footer {
+    border-top: 3px solid #f2522c;
+}
+
+/* Post comments */
+
+.form-submit input[type=submit] {
+	padding: 0.5rem 2rem;
+}
+
+.comment-reply-title, 
+.comment-form-comment label[for=comment], 
+h2.comments-title,
+.edit-link {
+	display: none;
+}
+
+#comment {
+	height: 2.5rem;
+}
+
+.comment-author, .fn a, 
+.comment-metadata a,
+.reply a { 
+	font-size:  var(--global--font-size-xs);
+	color: #c2c2c2;
+}
+
+.reply a {
+	margin: 0 0 0 5.3rem;
+}
+
+.comment-author {
+	float: left;
+}
+
+.comment-metadata {
+    padding: 0px 0 2px 85px;
+    float: left;
+}
+
+.comments-area.show-avatars .comment-metadata {
+	padding: 0;
+    margin: 0.8rem 0rem 0rem 1rem;
+}
+
+.comment-content p {
+	margin: 0 0 0 5.3rem;
+	clear: both;
+}
+
+.comment-content, .comment-meta  {
+	margin: 0;
+}
+
+
+/* You might also like */ 
+.recent-post-list {
+    background-color: #374456;
+    padding: 2rem 0 2rem 0;
+}
+
+/* Home list */
+ul.home-post-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.home-post-list li {
+	border-top: 1px solid #999;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.home-post-list li.active {
+	border-top: none;
+}
+
+.home-post-list .date {
+	color: #f2522c;
+	font-weight: 600;
+    font-size: 16px;
+    margin: 0 1rem 0 0;
+    font-variant: all-small-caps;
+}
+
+.home-post-list .title {
+    margin: 0 1rem 0 0;
+}
+
+.home-post-list .readingt {
+    color: #888;
+    float: right;
+    font-size: 1rem;
+}
