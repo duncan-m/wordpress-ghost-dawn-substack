@@ -14,7 +14,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header alignwide">
-	<p class="post-meta"><span class="date"><?php echo get_the_date( 'M j y' ); ?></span> - <span class="cat"><?php the_category(', '); ?></span> - <span class="readingt"><?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes"]'); ?></p>
+	<p class="post-meta"><span class="date"><?php echo get_the_date( 'M j Y' ); ?></span> - <span class="cat"><?php the_category(', '); ?></span> - <span class="readingt"><?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes"]'); ?></p>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<span class="texcerpt"><?php the_excerpt(); ?></span>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
@@ -33,6 +33,7 @@
 			)
 		);
 		?>
+	<div class="apply-access"><p><a href="/apply">Apply for access to the full article</a> or <a href="/register">login</a></p></div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">

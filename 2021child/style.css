@@ -13,13 +13,20 @@ Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-
 Text Domain: 2021child
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+
 
 /* Responsive */
 @media only screen and (min-width: 652px) {
 	:root {
 	--global--font-size-xxl: 5rem;
+	--heading--font-size-h3: 2rem;
+    --heading--font-size-h2: 3rem;
+    --post--heading--font-size-h2: 2rem;
+    
 	}
 }
+
 @media all and (max-width: 540px) {
 
 .comments-area.show-avatars .comment-metadata {
@@ -30,12 +37,21 @@ Text Domain: 2021child
 :root {
     --global--font-size-base: 1.25rem;
     --global--font-size-xs: 0.8rem;
+    --global--font-size-xsm: 1rem;
     --global--font-size-sm: 1.125rem;
     --global--font-size-md: 1.25rem;
     --global--font-size-lg: 1.5rem;
     --global--font-size-xl: 2.25rem;
     --global--font-size-xxl: 3.5rem;
     --global--font-size-xxxl: 5rem;
+    --heading--font-size-h6: var(--global--font-size-xs);
+    --heading--font-size-h5: var(--global--font-size-sm);
+    --heading--font-size-h4: var(--global--font-size-lg);
+    --heading--font-size-h3: calc(1.25 * var(--global--font-size-lg));
+    --heading--font-size-h2: var(--global--font-size-xl);
+    --heading--font-size-h1: var(--global--font-size-page-title);
+	--post-heading--font-size-h2: var(--global--font-size-lg);
+
 }    
 
 /* General */
@@ -50,6 +66,23 @@ a:hover, .primary-navigation a:hover {
 	color: #c2c2c2;
 }
 
+p.orange-text {
+	color: #db7158 !important;
+}
+
+/* Header */
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
+    background: none;
+    color: #c3c3c3 !important;
+}
+
+/* Home */
+.home .entry-footer {
+	display: none;
+}
+
+
 /* Posts */
 
 .post h1 {
@@ -57,9 +90,28 @@ a:hover, .primary-navigation a:hover {
     font-weight: 500;
 	margin: 0.3rem 0 0.3rem 0;
 }
+
+.post h2 {
+	font-size: var(--post-heading--font-size-h2);
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.post p {
+	font-family: 'Spectral', serif;
+	    display: block;
+    margin-top: 0.5rem;
+}
+
+
 .post-meta {
 	text-align: center;
 	font-size: 1rem;
+}
+
+p.post-meta, .post-meta a {
+	font-family: var(--heading--font-family);
+
 }
 
 p.post-meta {
@@ -72,6 +124,7 @@ p.post-meta {
 .post .cat a {
 	color: #f2522c;
 }
+
 .post .date, .post .readingt {
 	color: #c2c2c2; 
 }
@@ -82,8 +135,40 @@ p.post-meta {
     color: #cecece;
 }
 
+.texcerpt p {
+	margin: 0 3rem 0 3rem;
+}
+
 .single .site-main > article > .entry-footer {
     border-top: 3px solid #f2522c;
+}
+
+.entry-header {
+	margin-bottom: 4rem;
+}
+
+.loggedin-only {
+	text-align: center;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 1rem;
+  padding: 1.5em 1.5rem;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  color: #444;
 }
 
 /* Post comments */
@@ -137,6 +222,66 @@ h2.comments-title,
 	margin: 0;
 }
 
+/* User registration */
+
+.menu-wrapper .menu-item-58 a {
+	color: #f2522c;
+}
+
+.logged-in .menu-wrapper .menu-item-58 a, 
+.logged-in .menu-wrapper .menu-item-24 a,
+.menu-wrapper .menu-item-59 a {
+	display: none;
+}
+.logged-in .menu-wrapper .menu-item-59 a {
+	display: block;
+}
+
+
+.logged-in .apply-access {
+	display: none;
+}
+
+.user-registration {
+	border: none;
+}
+
+#user-registration {
+	margin: auto;
+	background-color: #374456;
+}
+
+
+#user-registration.horizontal .user-registration-MyAccount-navigation ul .user-registration-MyAccount-navigation-link.is-active a {
+    background-color: #4c5666;
+}
+
+#user-registration p {
+    color: #fff;
+}
+
+p.form-headline {
+	margin-bottom: 1rem;
+}
+
+.ur-frontend-form {
+	padding: 0 1rem 0 1rem;
+	margin-top: 0;
+}
+
+.toc {
+	font-size: var(--global--font-size-xsm);
+}
+
+.page-id-9 .site-header {
+	display: none !important;
+}
+
+user-registration-message {
+    border-top-color: #999;
+    background: rgba(143,174,27,.1);
+    color: #fff;
+}
 
 /* You might also like */ 
 .recent-post-list {
